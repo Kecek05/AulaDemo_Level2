@@ -1,5 +1,2 @@
 res://default_env.tres
 res://Scenes/Game.tscn
-res://Scenes/Menu.tscn
-res://Scenes/Lose.tscn
-res://Scenes/Win.tscn
