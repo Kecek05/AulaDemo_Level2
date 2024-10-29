@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=4 uid="uid://c4i67no8rkwk3"]
+[gd_scene load_steps=9 format=4 uid="uid://c4i67no8rkwk3"]
 
 [ext_resource type="Texture2D" uid="uid://bwbtlvdaa2af8" path="res://Sprites/Backgrounds/backgroundCastles.png" id="1"]
 [ext_resource type="TileSet" uid="uid://b6h5sbk6oavtg" path="res://Tileset/TileSet.tres" id="2_r0ywt"]
 [ext_resource type="Texture2D" uid="uid://bjda5o7gj3l63" path="res://Sprites/Player/Beige/alienBeige_walk1.png" id="3_ohn80"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="3_wdvii"]
+[ext_resource type="Texture2D" uid="uid://jstcgqytm07j" path="res://Sprites/Items/Spinner.png" id="5_x4mq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvw0x"]
 size = Vector2(48, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7if5v"]
+size = Vector2(1432, 90)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3ft3"]
+radius = 24.0
 
 [node name="World" type="Node"]
 
@@ -37,3 +44,20 @@ texture = ExtResource("3_ohn80")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_rvw0x")
+
+[node name="Void" type="StaticBody2D" parent="."]
+position = Vector2(-8, 744)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
+position = Vector2(668, 35)
+shape = SubResource("RectangleShape2D_7if5v")
+
+[node name="Spinner" type="Sprite2D" parent="."]
+position = Vector2(472, 600)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")

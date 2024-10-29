@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = 200 #go right
 	elif Input.is_action_pressed("ui_left"):
@@ -16,3 +16,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = -300
 	
 	move_and_slide()
+	
+	if get_slide_collision_count() > 0:
+		if get_slide_collision(0).get_collider().name == "Void":
+			get_tree().change_scene_to_file("res://Scenes/Lose.tscn")
