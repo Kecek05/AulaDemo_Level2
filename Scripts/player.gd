@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = 200 #go right
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = -200 #go left
+	else:
+		velocity.x = 0 # stop
+		
+	velocity.y += 20 #same as velocity.y = velocity.y + 20
+	
+	move_and_slide()

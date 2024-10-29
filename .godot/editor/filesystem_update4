@@ -1,6 +1,7 @@
 res://default_env.tres
 res://Scenes/Game.tscn
 res://Tileset/TileSet.tres
+res://Scripts/player.gd
 res://Scenes/Menu.tscn
 res://Scenes/Lose.tscn
 res://Scenes/Win.tscn
