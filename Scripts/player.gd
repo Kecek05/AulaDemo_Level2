@@ -20,3 +20,6 @@ func _physics_process(_delta: float) -> void:
 	if get_slide_collision_count() > 0:
 		if get_slide_collision(0).get_collider().name == "Void":
 			get_tree().change_scene_to_file("res://Scenes/Lose.tscn")
+			
+		if get_slide_collision(0).get_collider().name == "WinZone":
+			get_tree().change_scene_to_file("res://Scenes/Win.tscn")
