@@ -10,4 +10,9 @@ func _physics_process(delta: float) -> void:
 		
 	velocity.y += 20 #same as velocity.y = velocity.y + 20
 	
+	
+	if Input.is_action_pressed("ui_up"):
+		if is_on_floor():
+			velocity.y = -300
+	
 	move_and_slide()
