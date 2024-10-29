@@ -10,7 +10,7 @@
 size = Vector2(48, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7if5v"]
-size = Vector2(1432, 90)
+size = Vector2(2056, 90)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v3ft3"]
 radius = 24.0
@@ -26,7 +26,7 @@ region_rect = Rect2(0, 0, 1280, 720)
 [node name="Map" type="Node2D" parent="."]
 
 [node name="Ground" type="TileMapLayer" parent="Map"]
-tile_map_data = PackedByteArray("AAAZACgAAAAHAAgAAAAVACgAAAAHAAgAAAARACgAAAAHAAgAAAANACgAAAAHAAgAAAAJACgAAAAHAAgAAAAFACgAAAAIAAoAAAAdACgAAAAIAAgAAAA=")
+tile_map_data = PackedByteArray("AAAZACgAAAAHAAgAAAAVACgAAAAHAAgAAAARACgAAAAHAAgAAAANACgAAAAHAAgAAAAJACgAAAAHAAgAAAAFACgAAAAIAAoAAAAdACgAAAAIAAgAAAAsACgAAAAHAAgAAAAwACgAAAAHAAgAAAAoACgAAAAIAAoAAAA0ACgAAAAIAAgAAAA/ACEAAAAIAAoAAABDACEAAAAHAAgAAABHACEAAAAHAAgAAABLACEAAAAIAAgAAAAxABUAAAAIAAoAAAA1ABUAAAAHAAgAAAA5ABUAAAAIAAgAAAAnAA4AAAAIAAgAAAAjAA4AAAAHAAgAAAAfAA4AAAAHAAgAAAAbAA4AAAAHAAgAAAAXAA4AAAAHAAgAAAATAA4AAAAHAAgAAAAPAA4AAAAIAAoAAAA=")
 tile_set = ExtResource("2_r0ywt")
 
 [node name="Signs" type="TileMapLayer" parent="Map"]
@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_rvw0x")
 position = Vector2(-8, 744)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
-position = Vector2(668, 35)
+position = Vector2(660, 35)
 shape = SubResource("RectangleShape2D_7if5v")
 
 [node name="Spinner" type="Sprite2D" parent="."]
@@ -59,5 +59,65 @@ texture = ExtResource("5_x4mq8")
 [node name="Void" type="StaticBody2D" parent="Spinner"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner2" type="Sprite2D" parent="."]
+position = Vector2(752, 600)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner2/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner3" type="Sprite2D" parent="."]
+position = Vector2(1072, 488)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner3/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner4" type="Sprite2D" parent="."]
+position = Vector2(600, 184)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner4/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner6" type="Sprite2D" parent="."]
+position = Vector2(536, 184)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner6/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner7" type="Sprite2D" parent="."]
+position = Vector2(360, 184)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner7/Void"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_v3ft3")
+
+[node name="Spinner5" type="Sprite2D" parent="."]
+position = Vector2(864, 296)
+texture = ExtResource("5_x4mq8")
+
+[node name="Void" type="StaticBody2D" parent="Spinner5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner5/Void"]
 position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_v3ft3")
